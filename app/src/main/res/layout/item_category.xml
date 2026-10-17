@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/cardwhite"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Baris atas: nama + tombol hapus -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/ink"
+                android:background="@null"
+                android:hint="Nama"
+                android:singleLine="true"
+                android:padding="4dp" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:background="@null"
+                android:contentDescription="Hapus"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+
+        <!-- Baris 3 stepper: Isi/Kardus | Kardus | Sudah Ada -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <!-- Isi/Kardus -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ISI/KARDUS"
+                    android:textSize="9sp"
+                    android:textColor="@color/muted"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/editIsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/ink"
+                    android:background="@color/paper"
+                    android:padding="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+                    <Button
+                        android:id="@+id/stepIsiMinus"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="−"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="2dp"
+                        android:backgroundTint="@color/muted" />
+                    <Button
+                        android:id="@+id/stepIsiPlus"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="2dp"
+                        android:backgroundTint="@color/ink" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Kardus -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KARDUS"
+                    android:textSize="9sp"
+                    android:textColor="@color/muted"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/editKardus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/ink"
+                    android:background="@color/paper"
+                    android:padding="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+                    <Button
+                        android:id="@+id/stepKardusMinus"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="−"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="2dp"
+                        android:backgroundTint="@color/muted" />
+                    <Button
+                        android:id="@+id/stepKardusPlus"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="2dp"
+                        android:backgroundTint="@color/ink" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Sudah Ada -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SUDAH ADA"
+                    android:textSize="9sp"
+                    android:textColor="@color/muted"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/editAda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/ink"
+                    android:background="@color/paper"
+                    android:padding="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+                    <Button
+                        android:id="@+id/stepAdaMinus"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="−"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="2dp"
+                        android:backgroundTint="@color/muted" />
+                    <Button
+                        android:id="@+id/stepAdaPlus"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="2dp"
+                        android:backgroundTint="@color/ink" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Hasil Kurang -->
+        <LinearLayout
+            android:id="@+id/resultBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/ink"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#b9c9bd" />
+
+                <TextView
+                    android:id="@+id/txtHangul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#8a8776"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/txtKurang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/accent"
+                    android:lineSpacingMultiplier="0.85" />
+
+                <TextView
+                    android:id="@+id/txtUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pack kurang"
+                    android:textSize="9sp"
+                    android:textColor="#b9c9bd"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/txtHangulUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textColor="#8d7c00"
+                    android:layout_marginTop="1dp" />
+
+                <TextView
+                    android:id="@+id/txtKurangKorean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="@color/korean_yellow"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

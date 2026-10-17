@@ -1,0 +1,9 @@
+<resources>
+    <color name="ink">#1c2b24</color>
+    <color name="paper">#f6f4ee</color>
+    <color name="accent">#c96a3c</color>
+    <color name="okgreen">#2f6f4e</color>
+    <color name="cardwhite">#ffffff</color>
+    <color name="korean_yellow">#b59d00</color>
+    <color name="muted">#8a8776</color>
+</resources>

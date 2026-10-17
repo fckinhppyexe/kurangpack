@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.KurangPack" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/ink</item>
+        <item name="android:navigationBarColor">@color/ink</item>
+        <item name="colorPrimary">@color/ink</item>
+        <item name="android:fontFamily">monospace</item>
+    </style>
+</resources>
