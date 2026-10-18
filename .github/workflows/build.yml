@@ -31,8 +31,6 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      env:
-        ANDROID_HOME: ${{ steps.android-sdk.outputs.android-sdk-path }}
       run: ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK
