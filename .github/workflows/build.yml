@@ -21,6 +21,7 @@ jobs:
         cache: gradle
 
     - name: Set up Android SDK
+      id: android-sdk
       uses: android-actions/setup-android@v3
       with:
         packages: 'platforms;android-34 build-tools;34.0.0'
@@ -30,6 +31,8 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
+      env:
+        ANDROID_HOME: ${{ steps.android-sdk.outputs.android-sdk-path }}
       run: ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK
